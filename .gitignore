@@ -1,3 +1,5 @@
 node_modules/
 .env
 Document.txt
+cert.key
+ca.key
