@@ -14,6 +14,7 @@ const Login = () => {
         .then(result => {
             if(result.status == 201)
             {
+                localStorage.setItem('token', result.data.token)
                 navigate('/chat')
             }  
             else

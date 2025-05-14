@@ -1,4 +1,5 @@
 const userService = require("../services/userService");
+const jwt = require('jsonwebtoken')
 
 async function signup(req, res) {
     
@@ -31,8 +32,11 @@ async function login(req, res) {
     try {
         const isLoggedIn = await userService.login(email, password);
         if (isLoggedIn.success) {
-            console.log("ahla")
-            return res.status(201).json({ message: 'User loged in successfully ', userId: isLoggedIn.user._id });;
+            const token = jwt.sign(
+                {userID: isLoggedIn.user._id},
+                process.env.JWT_SECRET
+            )
+            return res.status(201).json({ message: 'User loged in successfully ', userId: isLoggedIn.user._id ,token});;
         } else {
             res.status(401).json( { error: isLoggedIn.message }); // Render login view with error
         }

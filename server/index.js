@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const express = require('express')
 var cors = require('cors')
-const session = require('express-session');
 require('dotenv').config();
+
 
 const server = express()
 
@@ -11,7 +11,7 @@ server.use(cors());
 server.use(express.json());  
 
 server.use('/', require('./routes/UserRoute'))
-
+server.use('/', require('./routes/chatRoute'))
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URL,{ dbName: 'kitchenette' })
