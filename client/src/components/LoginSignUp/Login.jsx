@@ -1,14 +1,33 @@
 import React, { useState } from "react";
 import './Login.css'
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 const Login = () => {
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
+    const navigate = useNavigate()
     const handleLogin = (e) => {
         e.preventDefault();
-        console.log("Signup email:", email, "password: ", password)
+        axios.post('http://localhost:3000/login',{email, password})
+        .then(result => {
+            if(result.status == 201)
+            {
+                navigate('/chat')
+            }  
+            else
+            {
+                alert('The information you provided may be incorrect. Please check your inputs and try again.')
+            }
+        })
+        .catch(err => {
+            if (err.response && err.response.status === 401) {
+                alert('Invalid email or password.');
+            } else {
+                alert('Something went wrong. Please try again later.');
+            }
+        });
     }
     return (
         <div className="container">
@@ -27,8 +46,8 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
+                <button type="submit">Login</button>
             </form>
-            <botton type="submit">Login</botton>
         </div>
     )
 }

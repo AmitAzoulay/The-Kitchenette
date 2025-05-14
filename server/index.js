@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const server = express()
 
-server.set("view engine", "ejs");
+
 server.use(cors());            
 server.use(express.json());  
 
@@ -14,7 +14,7 @@ server.use('/', require('./routes/UserRoute'))
 
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL,{ dbName: 'kitchenette' })
     .then(() => console.log('Connected to MongoDB!'))
     .catch(err => console.error('Database connection error:', err));
 
