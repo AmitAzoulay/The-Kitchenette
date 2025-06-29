@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# The KitchenetteAdd commentMore actions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the kitchenette a tribute to the legendary "kitchen cabinet" — not the kind you install above your sink, but the one where Golda Meir and Moshe Dayan famously cooked up state secrets over coffee and kugel. Much like those unofficial strategy sessions, this app is where serious business gets discussed… with zero minutes of official meeting scheduled. It’s a chat app, yes — but also a digital shtetl where real-time messages fly faster than diplomatic cables, and every emoji could start (or end) a crisis. Welcome to the warmest war room on the web.
 
-## Available Scripts
+Built to support Kubernetes, this app brings together the best of:
 
-In the project directory, you can run:
+    - MongoDB – because storing your chats in Post-Its just isn’t scalable
 
-### `npm start`
+    - Express.js – handling routes like Dayan handled crises
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - React – for snappy UIs and even snappier comebacks
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+    - Node.js – the glue binding it all together like a late-night strategy session over too much coffee
+  
+And yes - it’s K8s-ready, because what’s a proper kitchen cabinet without containers?
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Run the App
 
-### `npm run build`
+## npm
+Run in the server directory: npm start
+Run in the client directory: npm start
+Go to: http://localhost:3000/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## k8s
+Run in the k8s directory: docker compose up -d
+Go to: http://localhost:30000/
