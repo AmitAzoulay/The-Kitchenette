@@ -1,4 +1,4 @@
-# The KitchenetteAdd commentMore actions
+# The Kitchenette
 
 Welcome to the kitchenette a tribute to the legendary "kitchen cabinet" — not the kind you install above your sink, but the one where Golda Meir and Moshe Dayan famously cooked up state secrets over coffee and kugel. Much like those unofficial strategy sessions, this app is where serious business gets discussed… with zero minutes of official meeting scheduled. It’s a chat app, yes — but also a digital shtetl where real-time messages fly faster than diplomatic cables, and every emoji could start (or end) a crisis. Welcome to the warmest war room on the web.
 
